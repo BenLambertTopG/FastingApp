@@ -1,0 +1,11 @@
+D:\VBProjects\Fasting App\FastingApp\obj\Debug\FastingApp.csproj.AssemblyReference.cache
+D:\VBProjects\Fasting App\FastingApp\obj\Debug\FastingApp.csproj.SuggestedBindingRedirects.cache
+D:\VBProjects\Fasting App\FastingApp\obj\Debug\FastingApp.Form1.resources
+D:\VBProjects\Fasting App\FastingApp\obj\Debug\FastingApp.Properties.Resources.resources
+D:\VBProjects\Fasting App\FastingApp\obj\Debug\FastingApp.csproj.GenerateResource.cache
+D:\VBProjects\Fasting App\FastingApp\obj\Debug\FastingApp.csproj.CoreCompileInputs.cache
+D:\VBProjects\Fasting App\FastingApp\bin\Debug\FastingApp.exe.config
+D:\VBProjects\Fasting App\FastingApp\bin\Debug\FastingApp.exe
+D:\VBProjects\Fasting App\FastingApp\bin\Debug\FastingApp.pdb
+D:\VBProjects\Fasting App\FastingApp\obj\Debug\FastingApp.exe
+D:\VBProjects\Fasting App\FastingApp\obj\Debug\FastingApp.pdb
