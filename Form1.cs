@@ -21,8 +21,13 @@ namespace FastingApp
         int CustomTime; // Stored User Input
         int Count;
         int Hour, Min, Sec;
-        int Goal, Per, Gram, GramDiv, CalTotal;
         string CustomTimeString; //User Timer Input
+        decimal Gram;
+        decimal GramDiv;
+        decimal Goal;
+        decimal Per;
+        decimal CalTotal;
+
 
         private void timer(object sender, EventArgs e)
         {
@@ -44,13 +49,6 @@ namespace FastingApp
                 {
                 lblFeed.Show();
             }
-
-        }
-
-        private void btnGoal_Click(object sender, EventArgs e)
-        {
-            int Goal = int.Parse(txtTotalCal.Text);
-            lbltest.Text=Goal.ToString();
 
         }
 
@@ -77,18 +75,47 @@ namespace FastingApp
         private void Form1_Load(object sender, EventArgs e)
         {
             lblFeed.Hide();
+            lblExceeded.Hide();
+        }
+
+        //Calorie Calcultor
+        private void btnGoal_Click(object sender, EventArgs e)
+        {
+
+            decimal Goal = decimal.Parse(txtTotalCal.Text); //Takes TextBox TotalCal and Converts it to Int Goal
+            txtRemain.Text=Goal.ToString(); //Takes the Int Goal and Displays it in Text Box Remain
+
         }
 
         private void btnCal_Click(object sender, EventArgs e)
         {
+
+          //Math for the Calorie Calculator
+
+            //This works by taking the Total Daily Calories stated in the 'Remain' textbox when the set button it used.
+            //Then converts the other textboxes 'per' and 'gram'
+            //Dividing 'Gram' by 100 into 'GramDiv' so that 100g is not 1000g
+            //'Goal' is again set from the 'Remain' textbox data
+            //The Math then works out 'CalTotal' from: Goal - (Calories per gram * grams eaten)
+            //The new total is then converted back into a string and displayed in the 'remain' textbox
+            //Updating the remain textbox allows for further amount to be removed from the overall total.
+
         
-          int Per = int.Parse(txtPer.Text);
-          int Gram = int.Parse(txtGram.Text);
+            decimal Per = decimal.Parse(txtPer.Text); //Text Box Data Converted to Int Per
+            decimal Gram = decimal.Parse(txtGram.Text); //Text Box Data Converted to Int Gram
 
-            GramDiv = Gram / 100;
+            GramDiv = Gram / 100; //Divides Gram by 100 to make the Math work
 
-            CalTotal = Goal - (Per * GramDiv);
-            lbltest.Text = CalTotal+" Remaining"; //why is this ending up at -100 everytime?
+            Goal = decimal.Parse(txtRemain.Text); //Converts Goal from String to Int
+
+            decimal CalTotal = Goal - (Per * GramDiv); //The Math that removes total eaten calories from Goal calories
+            txtRemain.Text=CalTotal.ToString(); //Displays New total in TextBox
+
+            if (CalTotal<=1)
+            {
+                lblExceeded.Show();
+            }
+          
             
         }
 

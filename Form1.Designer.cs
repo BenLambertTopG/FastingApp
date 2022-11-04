@@ -50,7 +50,8 @@
             this.btnGoal = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbltest = new System.Windows.Forms.Label();
+            this.txtRemain = new System.Windows.Forms.TextBox();
+            this.lblExceeded = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
@@ -273,21 +274,36 @@
             this.label2.Text = "CALORIE CALCULATOR";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbltest
+            // txtRemain
             // 
-            this.lbltest.AutoSize = true;
-            this.lbltest.Location = new System.Drawing.Point(344, 1135);
-            this.lbltest.Name = "lbltest";
-            this.lbltest.Size = new System.Drawing.Size(51, 20);
-            this.lbltest.TabIndex = 24;
-            this.lbltest.Text = "label6";
+            this.txtRemain.Location = new System.Drawing.Point(545, 1056);
+            this.txtRemain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRemain.Name = "txtRemain";
+            this.txtRemain.Size = new System.Drawing.Size(258, 26);
+            this.txtRemain.TabIndex = 25;
+            this.txtRemain.Text = "1600";
+            this.txtRemain.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblExceeded
+            // 
+            this.lblExceeded.AutoEllipsis = true;
+            this.lblExceeded.Font = new System.Drawing.Font("Wigners Friend", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExceeded.ForeColor = System.Drawing.Color.Red;
+            this.lblExceeded.Location = new System.Drawing.Point(13, 1104);
+            this.lblExceeded.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblExceeded.Name = "lblExceeded";
+            this.lblExceeded.Size = new System.Drawing.Size(1266, 57);
+            this.lblExceeded.TabIndex = 26;
+            this.lblExceeded.Text = "CALORIES EXCEEDED";
+            this.lblExceeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1292, 1323);
-            this.Controls.Add(this.lbltest);
+            this.Controls.Add(this.lblExceeded);
+            this.Controls.Add(this.txtRemain);
             this.Controls.Add(label5);
             this.Controls.Add(label4);
             this.Controls.Add(label3);
@@ -337,7 +353,8 @@
         private System.Windows.Forms.Button btnGoal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbltest;
+        private System.Windows.Forms.TextBox txtRemain;
+        private System.Windows.Forms.Label lblExceeded;
     }
 }
 
